@@ -1,168 +1,172 @@
-<!DOCTYPE html>
-<html>
-<head><title>Three Rivers Technologies - Home</title>
-<link rel="icon" href="../imgs/favicon.ico">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./favicon.ico">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Scale to device width (also includes screen res.) -->
+    <title>Three Rivers Technologies</title>
 
-<!-- STYLESHEETS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/product/">
 
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
 
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="height:2em;background-color: rgba(0, 0, 0, .85);">
+        <div style="position:absolute;" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="font-size:0.75em;color:white;" href="mailto: info@3riverstech.com">info@3riverstech.com</a>
+            </li>
+          </ul>
+        </div>
+        <div style="margin-right:1em;position:absolute;right:0px;" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="font-size:0.75em;color:white;" href="tel:608-779-1324">608-779-1324</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="site-header sticky-top py-1">
+          <div class="container d-flex flex-column flex-md-row justify-content-between">
+              <a class="py-2" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+              </a>
+              <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
+              <a class="py-2 d-none d-md-inline-block" href="../inquire.html">Inquire</a>
+              <a class="py-2 d-none d-md-inline-block" href="../careers.html">Careers</a>
+              <a class="py-2 d-none d-md-inline-block" href="../about-us">About Us</a>
+              <a class="py-2 d-none d-md-inline-block" href="../contact-us">Contact Us</a>
+          </div>
+      </nav>
 
-<!-- ALERT BANNER (example: COVID-19 information) -->
-</head><body><div class="alert alert-warning sticky-top" id="alertbanner" style="margin: 0; display:none;">
-  <a class="navbar-brand">
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-exclamation-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-top:1%;">
-      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
-      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"></path>
-    </svg>
-    <p class="warning-banner" style="position:relative;margin:0%;">
-      <href id="alert-banner-info" style="cursor:pointer;" src="#"></href>
-    </p>
-  </a>
-  <div style="float:right">
-    <button type="button" class="btn btn-outline-primary" style="right:250px;background-color:transparent;border:none;" onclick="document.getElementById('alertbanner').style.display='none';document.getElementById('navbar').style.top='0px';">
-      <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"></path>
-      </svg>
-    </button>
-  </div>
-</div>
-
-<header>
-  <!-- CAROUSEL BANNER -->
-  <section>
-    <div class="trt-header-main" id="carousel-header" style="background-position: 0% 100%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(&quot;../imgs/img1.jpg&quot;);">
-      <div class="half-column">
-        <h1 class="trt-text-header1">Three Rivers<br>&nbsp;Technologies</h1>
-        <h2 class="trt-text-header2">Invest in your company. Put trust in us.</h2>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="background-size:cover; background-image:linear-gradient(rgba(192, 192, 192, 0.5), rgba(192, 192, 192, 0.5)), url(./res/imgs/bg1.jpg);">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal" style="text-align:left;">Testing.<br>Development.<br>Automation.<br>Maintenance.</h1>
+        <p class="lead font-weight-normal" style="color:black;">At Three Rivers Technologies, we specialize in testing, developing, maintaining, and improving your software solutions.</p>
+        <a class="btn btn-outline-dark" href="#" style="background-color: #00000040;">Contact us for more information!</a>
       </div>
-      <span class="row trt-header-subject" style="height:50%;">
-        <!-- Transparent logo aligned properly here -->
-        <span class="quarter-column" style="height:100%;"></span>
-        <span class="quarter-column" style="background-size: cover; height:100%; width:inherit; margin: auto;">
-          <img class="logo" src="../imgs/samplelogo.png">
-        </span>
-      </span>
-      <span class="row trt-header-subject" style="height:50%;">
-        <span class="quarter-column" style="height:100%;"></span>
-        <span class="quarter-column" style="height:inherit; margin:auto;">
-          <h2 id="subject" class="trt-text-header3" style="margin:auto;">Home</h2>
-        </span>
-      </span>
     </div>
-  </section>
-  <script id="carousel-script">
-		const carouselList = [ {img:"img1.jpg", x:0, y:100}, {img:"img2.jpg", x:20, y:50}, {img:"img3.jpg", x:0, y:100} ];
-		var idx = carouselList.length-1;
-		carousel();
-		
-    function carousel()
-    {
-      var header = document.getElementsByClassName('trt-header-main')[0];
-      var numImages = carouselList.length;;
 
-      idx = (++idx >= numImages) ? 0 : idx;
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Testing</h2>
+          <p class="lead">Automated or by hand, we can ensure your software works exactly as requested.</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto" style="width:80%; height:300px; border-radius:21px 21px 0 0;">
+            <img src="./res/imgs/testing.jpg" style="width:100%; height:100%; border-radius:15px 15px 0 0;">
+        </div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Development</h2>
+          <p class="lead">Looking to bring your idea to life? We can find the best team to help you.</p>
+        </div>
+        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <img src="./res/imgs/dev.jpg" style="width:100%; height:100%;border-radius:15px 15px 0 0;">
+        </div>
+      </div>
+    </div>
 
-      header.style.backgroundPosition = carouselList[idx].x + "% " + carouselList[idx].y + "%";
-      header.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imgs/" + carouselList[idx].img + "')";
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Automation</h2>
+          <p class="lead">It can get difficult using software manually. Let us help automate your software to make your life easier.</p>
+        </div>
+        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <img src="./res/imgs/automate.jpg" style="width:100%; height:100%;border-radius:15px 15px 0 0;">
+        </div>
+      </div>
+      <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Maintenance</h2>
+          <p class="lead">With technology infinitely improving, maintenance is key for quality of life and cyber security. We can help you with that too!</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px;border-radius:21px 21px 0 0;">
+            <img src="./res/imgs/maintenance.jpg" style="width:100%; height:100%;border-radius:15px 15px 0 0;">
+        </div>
+      </div>
+    </div>
 
-      setTimeout(carousel, getTime(numImages) * 1000);
-    }
+    <!-- bg3.jpg : Pawel Czerwinski : https://unsplash.com/photos/YxxglQTR2A4 -->
+    <div id="footer" style="background-size:100% 175%; background-image:linear-gradient(rgba(64, 64, 64, 0.80), rgba(64, 64, 64, 0.80)), url(./res/imgs/bg5.jpeg);">
+        <footer class="container py-5">
+          <div class="row">
+            <div class="col-12 col-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+            </div>
+            <div class="col-6 col-md">
+              <h5 style="color:#FFFFFF;font-weight:bold;">Features</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-item" href="#">Cool stuff</a></li>
+                <li><a class="link-item" href="#">Random feature</a></li>
+                <li><a class="link-item" href="#">Team feature</a></li>
+                <li><a class="link-item" href="#">Stuff for developers</a></li>
+                <li><a class="link-item" href="#">Another one</a></li>
+                <li><a class="link-item" href="#">Last time</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5 style="color:#FFFFFF;font-weight:bold;">Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-item" href="#">Resource</a></li>
+                <li><a class="link-item" href="#">Resource name</a></li>
+                <li><a class="link-item" href="#">Another resource</a></li>
+                <li><a class="link-item" href="#">Final resource</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5 style="color:#FFFFFF;font-weight:bold;">Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-item" href="#">Business</a></li>
+                <li><a class="link-item" href="#">Education</a></li>
+                <li><a class="link-item" href="#">Government</a></li>
+                <li><a class="link-item" href="#">Gaming</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5 style="color:#FFFFFF;font-weight:bold;">About</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-item" href="#">Team</a></li>
+                <li><a class="link-item" href="#">Locations</a></li>
+                <li><a class="link-item" href="#">Privacy</a></li>
+                <li><a class="link-item" href="#">Terms</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+    </div>
+    <div id="copyright" style="background-color:#000000;">
+        <div style="color:#ffffff">
+            © Copyright <script>document.write(new Date().getFullYear())</script> | Three Rivers Technologies
+        </div>
+    </div>
 
-    function getTime(numImages)
-    {
-      // return a time between 1-7 based on how many images are in the carousel.
-      return ((7 - (numImages / 5)) < 1) ? 1 : (7 - (numImages / 5));
-    }
-  </script>
-</header>
 
-<!-- Begin articles (navigation bar is also in the body section, as it is a sticky bar.) -->
-
-  <div class="articles-bg">
-    <link rel="stylesheet" href="../styles/style.css">
-    
-    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.7/holder.min.js" integrity="sha512-O6R6IBONpEcZVYJAmSC+20vdsM07uFuGjFf0n/Zthm8sOFW+lAq/OK1WOL8vk93GBDxtMIy6ocbj6lduyeLuqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    function hoverOn(e)
-    {
-      var menu = e.getElementsByClassName("dropdown-menu")[0];
-      menu.style.display = "block";
-    }
-    function hoverOff(e)
-    {
-      var menu = e.getElementsByClassName("dropdown-menu")[0];
-      menu.style.display = "none";
-    }
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
     </script>
-
-    <!-- NAVIGATION BAR -->
-    <nav class="navbar navbar-expand-md bg-semi-transparent sticky-top" id="navbar">
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-
-        <div id="left-navbar" class="navbar-header" style="width:auto;">
-          <span class="justify">
-          <a id="homepage-link" href="/index.html" class="navbar-brand nav-fill navbar-item">Home Page</a></span>
-        </div>
-
-        <div id="center-navbar" class="container navbar-header" style="width:auto;">
-          <span class="justify">
-          <a id="info-link1" href="/info.html" class="navbar-brand nav-fill navbar-item">Work With Us</a><a id="info-link2" href="/careers.html" class="navbar-brand nav-fill navbar-item">Work For Us</a></span>
-        </div>
-
-        <div id="right-navbar" class="navbar-header" style="width:auto;">
-          <span class="justify">
-          <div class="navbar-brand nav-fill navbar-item dropdown" onmouseenter="hoverOn(this)" onmouseleave="hoverOff(this)"><a href="#" id="aboutus-link" class="navbar-brand nav-fill navbar-item dropdown-toggle" data-toggle="dropdown">About Us</a><div class="trt-dropdown-menu dropdown-menu drop-to-straightdown" aria-labelledby="dropdownMenuButton"><a href="/company.html" class="dropdown-item text-color-white">Our Company</a><a href="/impact.html" class="dropdown-item text-color-white">Our Impact</a><a href="/offer.html" class="dropdown-item text-color-white">Our Offer</a></div></div></span>
-        </div>
-
-      </div>
-    </nav>
-
-    <script id="article-hover">
-const IMAGE_PATH = "../imgs/";
-		imgMap = new Map();
-		imgMap.set("coArticle", "opportunities.png");
-		imgMap.set("csArticle", "satisfaction.png");
-		imgMap.set("fdArticle", "fastservice.svg");
-		imgMap.set("qaArticle", "qassurance.png");
-		imgMap.set("servicesArticle", "services.png");
-		
-    function mouseOnArticle(e)
-    {
-      var articleBoxId = e.id;
-      document.getElementById(articleBoxId).style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))" + ((imgMap.get(articleBoxId) != "undefined") ? (", url('" + IMAGE_PATH + imgMap.get(articleBoxId)) : "") + "')";
-    }
-    function mouseOffArticle(e)
-    {
-      var articleBoxId = e.id;
-      document.getElementById(articleBoxId).style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))" + ((imgMap.get(articleBoxId) != "undefined") ? (", url('" + IMAGE_PATH + imgMap.get(articleBoxId)) : "") + "')";
-    }
-    </script>
-    <!-- STORIES -->
-    <div id="stories" style="overflow:hidden;">
-    <div id="col1" style="float:left;width:calc(100%);"><div id="col1_row1" style="overflow:hidden;display:block;" class="story-bg-one-col"><span><h1 class="story-title">Our Commitment to You</h1><pre class="story-text" style="text-align:center;">Three Rivers Technologies designs, develops, and supports custom software tailored to your business processes. Whether you want to build a project from the ground up or augment your development team, our highly skilled consultants are ready to deliver value and expertise on day one.
-</pre></span></div></div></div>
-
-    <!-- ARTICLES -->
-    <div id="articles">
-    <article><div class="article-box" id="servicesArticle" onmouseenter="mouseOnArticle(this)" onmouseleave="mouseOffArticle(this)" onclick="window.location.href = &quot;./services.html&quot;;" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(&quot;../imgs/services.png&quot;);"><h1 class="article-title">Services</h1><h2 class="article-summary">What we do</h2><h3 class="article-description">How we do it</h3></div></article><article><div class="article-box" id="qaArticle" onmouseenter="mouseOnArticle(this)" onmouseleave="mouseOffArticle(this)" onclick="window.location.href = &quot;./qassurance.html&quot;;" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(&quot;../imgs/qassurance.png&quot;);"><h1 class="article-title">Quality Assurance</h1><h2 class="article-summary">The BEST for you!</h2><h3 class="article-description">We can promise our developers will deliver only the highest of quality products.</h3></div></article><article><div class="article-box" id="fdArticle" onmouseenter="mouseOnArticle(this)" onmouseleave="mouseOffArticle(this)" onclick="window.location.href = &quot;./fastservice.html&quot;;" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(&quot;../imgs/fastservice.svg&quot;);"><h1 class="article-title">Fast Delivery</h1><h2 class="article-summary">Efficiency and Speed</h2><h3 class="article-description">Effective and transparent communication between the customer and Three Rivers Technologies ensures timely discovery and elimination of bugs.</h3></div></article><article><div class="article-box" id="csArticle" onmouseenter="mouseOnArticle(this)" onmouseleave="mouseOffArticle(this)" onclick="window.location.href = &quot;./satisfaction.html&quot;;" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(&quot;../imgs/satisfaction.png&quot;);"><h1 class="article-title">Customer Satisfaction</h1><h2 class="article-summary">You matter to us.</h2><h3 class="article-description">Our focus is our customers. We establish this with our comprehensive work and our list of trusted clients.</h3></div></article><article><div class="article-box" id="coArticle" onmouseenter="mouseOnArticle(this)" onmouseleave="mouseOffArticle(this)" onclick="window.location.href = &quot;./careers.html&quot;;" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(&quot;../imgs/opportunities.png&quot;);"><h1 class="article-title">Career Opportunities</h1><h2 class="article-summary">Competitive Jobs</h2><h3 class="article-description"></h3></div></article></div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      <div class="third-column">
-        <img id="footer-logo" style="margin-top:90px; margin-left: 200px; height:200px;width:200px;border-radius:100px;" src="../imgs/samplelogo.png">
-        <h1 id="copyright" class="footer-text2" style="margin-top:60px;"></h1>
-      </div>
-      <div id="footer-center-col" class="third-column" style="padding-top:150px;">
-      <h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/info.html">Work With Us</a></h1><h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/careers.html">Work For Us</a></h1></div>
-      <div id="footer-right-col" class="third-column" style="padding-top:150px;">
-      <h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/company.html">Our Company</a></h1><h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/impact.html">Our Impact</a></h1><h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/offer.html">Our Offer</a></h1></div>
-    </div>
-  </div>
-
-
-</body></html>
+  </body>
+</html>
