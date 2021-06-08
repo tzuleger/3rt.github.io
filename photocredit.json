@@ -1,10 +1,29 @@
 {
+    "Disclosure":"All photos were taken from free photograph websites (mainly Pexels) and are not owned by Three Rivers Technologies. \
+        This file contain the links to the photos and a reference to the original creators. \
+        Some photos may not have URL due to not being able to find the original creator. \
+        If you are the creator of said photo (or photos), please send us an email so we can you give you the credit you deserve.",
     "bg1":"",
     "bg2":"",
     "bg3":"https://unsplash.com/photos/YxxglQTR2A4",
     "bg4":"https://www.pexels.com/photo/ball-shaped-circle-close-up-dark-414860/",
     "bg5":"https://www.pexels.com/photo/green-pine-trees-near-body-of-water-1064162/",
     "bg6":"https://www.pexels.com/photo/person-holding-gray-pen-sitting-near-laptop-313691/",
+    "bg7":"https://www.pexels.com/photo/geometric-decoration-5836/",
+    "bg8":"https://www.pexels.com/photo/time-lapse-photography-of-blue-lights-373543/",
+    "bg9":"https://www.pexels.com/photo/gray-metal-cubes-decorative-1005644/",
+    "bg10":"https://www.pexels.com/photo/ball-shaped-circle-close-up-dark-414860/",
+    "bg11":"https://www.pexels.com/photo/multicolored-lighted-device-1044990/",
+    "bg12":"https://www.pexels.com/photo/assorted-color-laser-lights-417458/",
+    "bg13":"https://www.pexels.com/photo/black-cables-1054397/",
+    "bg14":"https://www.pexels.com/photo/close-up-photo-of-keyboard-220357/",
+    "bg15":"https://www.pexels.com/photo/light-painting-at-night-327509/",
+    "bg16":"https://www.pexels.com/photo/technology-blur-modern-device-1597776/",
+    "bg17":"https://www.pexels.com/photo/man-wearing-black-and-white-stripe-shirt-looking-at-white-printer-papers-on-the-wall-212286/",
+    "bg18":"https://www.pexels.com/photo/old-electric-power-plant-controller-55830/",
+    "bg19":"https://www.pexels.com/photo/black-and-yellow-electronic-chip-785418/",
+    "bg20":"https://www.pexels.com/photo/black-and-white-striped-textile-193350/",
+    "bg21":"https://www.pexels.com/photo/abstract-art-blur-board-270549/",
     "automate":"",
     "dev":"",
     "maintenance":"",
@@ -12,5 +31,9 @@
     "career1":"https://www.pexels.com/photo/man-in-black-shirt-sits-behind-desk-with-computers-2102416/",
     "career2":"https://www.pexels.com/photo/woman-coding-on-computer-3861958/",
     "career3":"https://www.pexels.com/photo/top-view-of-people-at-the-meeting-3184287/",
-    "careers":"https://www.pexels.com/photo/matrix-background-1089438/"
+    "careers":"https://www.pexels.com/photo/matrix-background-1089438/",
+    "mississippi-railroad":"https://www.pexels.com/photo/light-road-landscape-sunset-7717183/",
+    "horizon":"https://www.pexels.com/photo/snow-sea-dawn-landscape-7803892/",
+    "group-table":"https://www.pexels.com/photo/group-of-people-using-laptops-1560932/",
+    "code-close-up":"https://www.pexels.com/photo/text-1089440/"
 }
