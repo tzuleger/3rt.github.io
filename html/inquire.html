@@ -32,7 +32,7 @@
             </ul>
         </div>
         <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <img class="clickable-article" src="../res/imgs/3rt_logo.png" style="margin-left:auto;margin-right:auto;padding-top:10px;padding-bottom:10px;" onclick="location.href='./index.html'"></img>
+            <img class="clickable-article" src="../../res/imgs/3rt_logo.png" style="margin-left:auto;margin-right:auto;padding-top:10px;padding-bottom:10px;" onclick="location.href='../index.html'"></img>
         </div>
         <div style="margin-right:1em;position:absolute;right:0px;" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -280,25 +280,21 @@
             $("#submit-form").click(function()
             {
                 console.log("Submitting");
-                sendData([document.getElementById('firstName').value,
-                    document.getElementById('lastName').value,
-                    document.getElementById('email').value,
-                    document.getElementById('phoneNumber').value,
-                    document.getElementById('description').value]);
+                sendData(
+                {
+                    "firstname":document.getElementById('firstName').value,
+                    "lastname":document.getElementById('lastName').value,
+                    "email":document.getElementById('email').value,
+                    "phone":document.getElementById('phoneNumber').value,
+                    "description":document.getElementById('description').value
+                });
             });
 
             function sendData(data)
             {
                 const xhr = new XMLHttpRequest();
 
-                let urlEncodedData = "", urlEncodedPairs = [], name;
-
-                for(name in data)
-                {
-                    urlEncodedPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
-                }
-
-                urlEncodedData = urlEncodedPairs.join( '&' ).replace( /%20/g, '+' );
+                json = JSON.stringify(data);
 
                 xhr.addEventListener('load', function(event)
                 {
@@ -310,11 +306,11 @@
                     // Error
                 });
 
-                xhr.open('POST', 'http://localhost:8080/localserver.py', true);
+                xhr.open('POST', 'http://localhost:8080', true);
 
                 xhr.setRequestHeader('Content-Type', 'application/json');
 
-                xhr.send(urlEncodedData);
+                xhr.send(json);
             }
         </script>
     </body>
