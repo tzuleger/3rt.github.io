@@ -24,7 +24,7 @@
 
     <!-- Navigation Bar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="height:5em;background-color: rgba(0, 0, 0, .85);">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="height:5em;background-color: rgba(0, 0, 0, .65);">
         <div style="position:absolute;" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -33,7 +33,7 @@
             </ul>
         </div>
         <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <img class="clickable-article" src="../../res/imgs/3rt_logo.png" style="margin-left:auto;margin-right:auto;padding-top:10px;padding-bottom:10px;" onclick="location.href='../../index.html'"></img>
+            <img class="clickable-article main-logo" src="../../res/imgs/3rt_logo.png" style="margin-left:auto;margin-right:auto;padding-top:10px;padding-bottom:10px;" onclick="location.href='../../index.html'"></img>
         </div>
         <div style="margin-right:1em;position:absolute;right:0px;" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -43,7 +43,7 @@
             </ul>
         </div>
     </nav>
-    <nav class="site-header sticky-top py-1">
+    <nav class="site-header sticky-top py-1" style="background-color: rgba(0, 0, 0, .65);">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
             <a class="py-2 d-none d-md-inline-block" href="../../index.html">Home</a>
             <a class="py-2 d-none d-md-inline-block" href="../../html/inquire.html">Inquire</a>
@@ -53,25 +53,46 @@
     </nav>
 
     <!-- Content -->
-
-    <div class="position-relative overflow-hidden p-2 p-md-2 m-md-2 text-center bg-light" style="background-size:cover; background-image:linear-gradient(rgba(64, 64, 64, 0.5), rgba(64, 64, 64, 0.5)), url(../../res/imgs/bg7.jpg);">
+    <div class="position-relative overflow-hidden p-2 p-md-2 m-md-2 text-center bg-light" style="background-size:cover; background-image:linear-gradient(rgba(64, 64, 64, 0.5), rgba(64, 64, 64, 0.5)), url(../../res/imgs/bg23.jpeg);">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="display-4 font-weight-normal" style="text-align:center;color:white;">Testing</h1>
-            <p class="lead font-weight-normal" style="color:white;">Our developers test our code manually with unit tests, including libraries like Microsoft's Unit Testing library. We also test automatically with frameworks and libraries like Selenium.</p>
+            <p class="lead font-weight-normal" style="color:white;">We develop, we maintain, but most importantly, we test.</p>
         </div>
     </div>
-
-    <div class="position-relative overflow-hidden p-2 p-md-2 m-md-2 text-center bg-light" style="background-size:cover; background-image:linear-gradient(rgba(64, 64, 64, 0.5), rgba(64, 64, 64, 0.5)), url(../../res/imgs/bg16.jpeg);">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 font-weight-normal" style="text-align:center;color:white;">Unit Testing</h1>
-            <p class="lead font-weight-normal" style="color:white;">Our standard is held to a percentage of 90% code coverage or better with every unit test. You can also request a specific percentage to be met!</p>
+    <div class="container">
+        <div class="row" style="padding: 40px 0 40px 0">
+            <div id="message" class="col-md-6 order-md-1" style="padding: 50px;">
+                <p style="font-size:20px; text-align:center;">Through the development process, our developers thoroughly walk through the code they write. With the layers of review, we also assign testers to our developing applications. Our testers walk through the code hundreds of times as if they are actual users looking for any deficienies that may have been missed.</p>
+            </div>
+            <div class="position-relative overflow-hidden col-md-6 order-md-1 text-center bg-light" style="border-radius:5%; background-size:cover; background-image:linear-gradient(rgba(64, 64, 64, 0.5), rgba(64, 64, 64, 0.5)), url(../../res/imgs/bg17.jpeg);">
+                <div class="col-md-6 p-lg-5 my-5">
+                    <h1 class="display-4 font-weight-normal" style="color:white;">Manual Testing</h1>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="position-relative overflow-hidden p-2 p-md-2 m-md-2 text-center bg-light" style="background-size:cover; background-image:linear-gradient(rgba(64, 64, 64, 0.5), rgba(64, 64, 64, 0.5)), url(../../res/imgs/bg17.jpeg);">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 font-weight-normal" style="text-align:center;color:white;">Automation</h1>
-            <p class="lead font-weight-normal" style="color:white;">Manually unit testing can leave room for human error, that's why we use testing libraries like the <a href="#">Selenium Webdriver</a> so we can guarantee that all corner cases of your application has been tested.</p>
+    <div class="container">
+        <div class="row" style="padding: 40px 0 40px 0">
+            <div class="position-relative overflow-hidden col-md-6 order-md-1 text-center bg-light" style="border-radius:5%; background-size:cover; background-image:linear-gradient(rgba(64, 64, 64, 0.5), rgba(64, 64, 64, 0.5)), url(../../res/imgs/bg7.jpg);">
+                <div class="col-md-6 p-lg-3 mx-auto my-5">
+                    <h1 class="display-4 font-weight-normal" style="transform:translate(0%, 50%); color:white; text-align:right;">Automated Testing</h1>
+                </div>
+            </div>
+            <div id="message" class="col-md-6 order-md-1" style="padding: 50px;">
+                <p style="font-size:20px; text-align:center;">Manually testing can leave room for human error or concurrency errors. That is why we use testing libraries like the <a href="https://www.selenium.dev/">Selenium Webdriver</a> so we can guarantee that all corner cases of your web application have been tested. We also use <a href="https://specflow.org/">SpecFlow</a> for human-readable test cases to provide as much transparency between the test and the customer. The goal of our automated testing is to simulate an actual work environment and catch bugs that a single user cannot catch.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="padding: 40px 0 40px 0">
+            <div id="message" class="col-md-6 order-md-1" style="padding: 50px;">
+                <p style="font-size:20px; text-align:center;">Unit Testing is one of the most vital parts to maintaining code and applications. Our developers aim for a 90% or better code coverage for all unit tests. Knowing that the code has been run in a unit test ensures that the code is behaving as expected.</p>
+            </div>
+            <div class="position-relative overflow-hidden col-md-6 order-md-1 text-center bg-light" style="border-radius:5%; background-size:cover; background-image:linear-gradient(rgba(64, 64, 64, 0.5), rgba(64, 64, 64, 0.5)), url(../../res/imgs/bg16.jpeg);">
+                <div class="col-md-6 p-lg-5 my-5">
+                    <h1 class="display-4 font-weight-normal" style="color:white;">Unit Testing</h1>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -83,32 +104,22 @@
                 <div class="col-6 col-md">
                     <h5 style="color:#FFFFFF;font-weight:bold;">Our Offer</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="link-item" href="../../html/offer/testing.html">Testing</a></li>
-                        <li><a class="link-item" href="../../html/offer/development.html">Development</a></li>
-                        <li><a class="link-item" href="../../html/offer/maintenance.html">Maintenance</a></li>
-                        <li><a class="link-item" href="../../html/offer/automation.html">Automation</a></li>
-                        <li><a class="link-item" href="../../html/offer/qassurance.html">Quality Assurance</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5 style="color:#FFFFFF;font-weight:bold;">Our Impact</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="link-item" href="../../html/our-impact/open-source.html">Open Source</a></li>
+                        <li><a class="link-item" href="./testing.html">Testing</a></li>
+                        <li><a class="link-item" href="./development.html">Development</a></li>
+                        <li><a class="link-item" href="./qassurance.html">Quality Assurance</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h5 style="color:#FFFFFF;font-weight:bold;">About Us</h5>
                     <ul class="list-unstyled text-small">
                         <li><a class="link-item" href="https://www.reconyx.com/">Reconyx</a></li>
-                        <li><a class="link-item" href="../../html/about-us/locations.html">Locations</a></li>
-                        <li><a class="link-item" href="../../html/about-us/privacy.html">Privacy</a></li>
-                        <li><a class="link-item" href="../../html/about-us/terms.html">Terms</a></li>
+
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h5 style="color:#FFFFFF;font-weight:bold;">Contact Us</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="link-item" href="../../html/inquire.html">Inquire</a></li>
+                        <li><a class="link-item" href="../html/inquire.html">Inquire</a></li>
                         <li><a class="link-item" href="mailto:info@3riverstech.com">Email</a></li>
                         <li><a class="link-item" href="tel:608-779-1324">Call Us</a></li>
                     </ul>

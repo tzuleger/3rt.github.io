@@ -10,11 +10,23 @@ ul.nav
     margin-bottom:0!important;
 }
 
+.main-logo
+{
+    min-height:80%;
+    min-width:200px;
+    width:20vw;
+    height:100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
 .clickable-article
 {
     cursor:pointer;
     transition-delay: 0.05s;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
 }
 .clickable-article:hover
 {

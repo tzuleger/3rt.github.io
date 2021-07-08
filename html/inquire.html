@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="../res/favicon.ico">
 
     <title>Three Rivers Technologies</title>
 
@@ -23,7 +23,7 @@
 
     <!-- Navigation Bar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="height:5em;background-color: rgba(0, 0, 0, .85);">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="height:5em;background-color: rgba(0, 0, 0, .65);">
         <div style="position:absolute;" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -32,7 +32,7 @@
             </ul>
         </div>
         <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <img class="clickable-article" src="../../res/imgs/3rt_logo.png" style="margin-left:auto;margin-right:auto;padding-top:10px;padding-bottom:10px;" onclick="location.href='../index.html'"></img>
+            <img class="clickable-article main-logo" src="../../res/imgs/3rt_logo.png" style="margin-left:auto;margin-right:auto;padding-top:10px;padding-bottom:10px;" onclick="location.href='../index.html'"></img>
         </div>
         <div style="margin-right:1em;position:absolute;right:0px;" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -42,7 +42,7 @@
             </ul>
         </div>
     </nav>
-    <nav class="site-header sticky-top py-1">
+    <nav class="site-header sticky-top py-1" style="background-color: rgba(0, 0, 0, .65);">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
             <a class="py-2 d-none d-md-inline-block" href="../index.html">Home</a>
             <a class="py-2 d-none d-md-inline-block" href="#">Inquire</a>
@@ -115,14 +115,6 @@
                 </form>
             </div>
         </div>
-        <div class="row" style="padding: 40px 0 40px 0">
-            <div id="message" class="col-md-6 order-md-1" style="padding: 0 100px 0 100px;">
-                <p>Info here</p>
-            </div>
-            <div id="message" class="col-md-6 order-md-1" style="padding: 0 100px 0 100px;">
-                <p>Info here</p>
-            </div>
-        </div>
     </div>
 
     <!-- Footer -->
@@ -133,26 +125,16 @@
                 <div class="col-6 col-md">
                     <h5 style="color:#FFFFFF;font-weight:bold;">Our Offer</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="link-item" href="../html/offer/testing.html">Testing</a></li>
-                        <li><a class="link-item" href="../html/offer/development.html">Development</a></li>
-                        <li><a class="link-item" href="../html/offer/maintenance.html">Maintenance</a></li>
-                        <li><a class="link-item" href="../html/offer/automation.html">Automation</a></li>
-                        <li><a class="link-item" href="../html/offer/qassurance.html">Quality Assurance</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5 style="color:#FFFFFF;font-weight:bold;">Our Impact</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="link-item" href="../html/our-impact/open-source.html">Open Source</a></li>
+                        <li><a class="link-item" href="./offer/testing.html">Testing</a></li>
+                        <li><a class="link-item" href="./offer/development.html">Development</a></li>
+                        <li><a class="link-item" href="./offer/qassurance.html">Quality Assurance</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h5 style="color:#FFFFFF;font-weight:bold;">About Us</h5>
                     <ul class="list-unstyled text-small">
                         <li><a class="link-item" href="https://www.reconyx.com/">Reconyx</a></li>
-                        <li><a class="link-item" href="../html/about-us/locations.html">Locations</a></li>
-                        <li><a class="link-item" href="../html/about-us/privacy.html">Privacy</a></li>
-                        <li><a class="link-item" href="../html/about-us/terms.html">Terms</a></li>
+
                     </ul>
                 </div>
                 <div class="col-6 col-md">
@@ -222,7 +204,9 @@
                     // If value has changed...
                     if (elem.data('oldVal') != elem.val())
                     {
+                        console.log(elem.data('oldVal') + '=?' + elem.val())
                         // Updated stored value
+
                         elem.data('oldVal', elem.val());
 
                         // Do action
@@ -233,11 +217,12 @@
             function formatPhoneNumber(el)
             {
                 var value = el.value;
+                console.log(value)
                 var rawNumber = value.replace('(', '').replace(')', '').replace('-', '').replace(' ', '');
 
-                var areacode = rawNumber.length >= 3 ? rawNumber.substring(0, 3) : rawNumber.substring(0, rawNumber.length);
-                var first3 = rawNumber.length >= 6 ? rawNumber.substring(3, 6) : rawNumber.substring(3, rawNumber.length);
-                var last4 = rawNumber.length >= 10 ? rawNumber.substring(6, 10) : rawNumber.substring(6, rawNumber.length);
+                var areacode = rawNumber.length >= 3  ? rawNumber.substring(0, 3)  : rawNumber.substring(0, rawNumber.length);
+                var first3   = rawNumber.length >= 6  ? rawNumber.substring(3, 6)  : rawNumber.substring(3, rawNumber.length);
+                var last4    = rawNumber.length >= 10 ? rawNumber.substring(6, 10) : rawNumber.substring(6, rawNumber.length);
 
                 var formatareacode = "({0}) ";
                 var formatfirst3 = "{0}-";
@@ -280,7 +265,7 @@
             $("#submit-form").click(function()
             {
                 console.log("Submitting");
-                sendData(
+                post(
                 {
                     "firstname":document.getElementById('firstName').value,
                     "lastname":document.getElementById('lastName').value,
@@ -290,23 +275,19 @@
                 });
             });
 
-            function sendData(data)
+            function post(data)
             {
                 const xhr = new XMLHttpRequest();
 
                 json = JSON.stringify(data);
 
-                xhr.addEventListener('load', function(event)
+                xhr.onreadystatechange = function(event)
                 {
                     // data sent, responseloaded
+                    console.log(xhr.responseText)
                 });
 
-                xhr.addEventListener('error', function(event)
-                {
-                    // Error
-                });
-
-                xhr.open('POST', 'http://localhost:8080', true);
+                xhr.open('POST', 'http://localhost:5000', true);
 
                 xhr.setRequestHeader('Content-Type', 'application/json');
 
